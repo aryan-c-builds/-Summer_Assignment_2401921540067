@@ -1,0 +1,17 @@
+class Solution {
+public:
+    string reverseWords(string s) {
+        int beg=0;
+        for(int j=0; j<=s.size(); j++){
+            if(s[j]==' ' || j==s.size()){
+                int l=beg, r=j-1;
+                while(l<r){ 
+                    swap(s[l], s[r]);
+                    l++, r--;
+                }
+                beg = j+1;
+            }
+        }
+    return s;   
+    }
+};
